@@ -1,0 +1,158 @@
+Ans 1:
+import java.util.Scanner;
+public class EqualCheck {
+    public static void main(String[] args)
+    {
+	Scanner input = new Scanner(System.in);
+	System.out.println(“Input first number:”);
+	Int num1=input.nextInt();
+	System.out.println(“Input second number:”);
+	Int num2=input.nextInt();
+	if(num1==num2){
+		System.out.println(“Input third number:”);
+		Int num3=input.nextInt();
+		if(num1==num3){
+			System.out.println(“Input third number:”);
+			Int num4=input.nextInt();
+			if(num3==num4){
+				System.out.println(“Equal”);
+			}else{
+				System.out.println(“Not equal”);
+			}
+		}else{
+			System.out.println(“Not equal”);
+		}
+	}else{
+		System.out.println(“Not equal”);
+	}
+
+    }
+}
+
+Ans 2:
+import java.util.Scanner;
+public class Range{
+	Public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.println(“input first number: ”);
+		double num1=input.nextDouble();
+		if(num1>0 && num1<1){
+			System.out.println(“input second number: ”);
+			double num2=input.nextDouble();
+			if(num2>0 && num2<1){
+				System.out.println(“true”);
+			}else{
+				System.out.println(“false”);
+			}
+		}else{
+			System.out.println(“false”);
+		}
+	}
+}
+
+Ans3:
+import java.util.Scanner;
+public class Bools{
+	public static void main(String[] args){
+		boolean[][] array={{true,false,true},{false,true,false}};
+       		 for(int i=0;i<array.length;i++)
+       		 {
+            		for(int j=0;j<array[0].length;j++)
+            		{
+                		if(array[i][j])
+                		{
+                    		System.out.print(" t ");
+               		 }
+                		else
+               		 {
+                    		System.out.print(" f ");
+               		 }
+          			  }
+           			 System.out.print("\n");
+       			 }
+
+	}
+}
+
+Ans4:
+import java.util.Scanner;
+public class Solution {
+	public static void main(String[] args) {
+		int[][] twodm = {
+				{10, 20, 30},
+				{40, 50, 60}
+		};
+		System.out.print("Original Array:\n");
+		print_array(twodm);
+		System.out.print("After changing the rows and columns of the said array:");
+		rowstocols(twodm);
+		}
+	
+	private static void rowstocols(int[][] twodm) {
+		
+		int[][] newtwodm = new int[twodm[0].length][twodm.length];
+		
+		for (int i = 0; i < twodm.length; i++) {
+			for (int j = 0; j < twodm[0].length; j++) {
+				newtwodm[j][i] = twodm[i][j];
+			}
+		}
+		
+		print_array(newtwodm);
+	}
+	private static void print_array(int[][] twodm) {
+		for (int i = 0; i < twodm.length; i++) {
+			for (int j = 0; j < twodm[0].length; j++) {
+				System.out.print(twodm[i][j] + " ");
+			}
+			System.out.println();
+		}
+	
+	}
+}
+
+
+Ans5:
+import java.util.Arrays;
+public class Nlargest {
+   public static void main(String[] args)
+   {
+       int[] array={1,4,17,7,25,3,100};
+       int k=3;
+       System.out.println("Original array:");
+       System.out.println(Arrays.toString(array));
+       Arrays.sort(array);
+       System.out.println("3 largest elements of the said array are:");
+       for(int i=array.length-1;i>k;i--)
+       {
+        System.out.print(array[i]+" "); 
+       }
+   } 
+}
+
+
+Ans6:
+import java.util.Scanner;
+public class Binaryrep {
+    public static void main(String[] args)
+    {
+        int number,temp,count=0;
+        String binaryNumber="";
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Input first number: ");
+        number=sc.nextInt();
+        int n=number;
+        while(number>0)
+        {
+            temp=number%2;
+            if(temp==0)
+            {
+                count++;
+            }
+            binaryNumber=temp+binaryNumber;
+            number=number/2;
+        }
+        System.out.println("Binary representation of "+n+" is: "+binaryNumber);
+        System.out.println("Number of zero bits: "+count);
+    }
+}
